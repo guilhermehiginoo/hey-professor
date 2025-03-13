@@ -26,20 +26,25 @@ jobs:
       run: |
         mkdir -p database
         touch database/database.sqlite
+    - name: Set SQLite file permissions
+      run: chmod 777 database/database.sqlite
     - name: Build Assets
       run: npm run build
-
+    - name: Copy .env.testing if exists
+      run: |
+        if [ -f .env.testing ]; then
+          cp .env.testing .env;
+        fi
     - name: Run migrations
-      run: php artisan migrate --env=testing
-    
+      run: php artisan migrate --env=testing --force
     - name: Execute tests (Unit and Feature tests) via PEST
       env:
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
       run: php artisan test --parallel
-      
+    - name: Display Laravel logs
+      run: cat storage/logs/laravel.log
     - name: Execute Larastan
       run: vendor/bin/phpstan analyse
-      
     - name: Execute Laravel Pint
       run: vendor/bin/pint --test
