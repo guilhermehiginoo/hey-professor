@@ -15,11 +15,13 @@ jobs:
         env:
           MYSQL_ROOT_PASSWORD: root
           MYSQL_DATABASE: hey_professor
-          MYSQL_USER: hey_professor_user
-          MYSQL_PASSWORD: secret
         ports:
           - 3306:3306
-        options: --health-cmd="mysqladmin ping --silent" --health-interval=10s --health-timeout=5s --health-retries=5
+        options: >-
+          --health-cmd="mysqladmin ping --silent"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=5
 
     steps:
     - uses: actions/checkout@v3
@@ -47,13 +49,13 @@ jobs:
         DB_HOST: 127.0.0.1
         DB_PORT: 3306
         DB_DATABASE: hey_professor
-        DB_USERNAME: hey_professor_user
-        DB_PASSWORD: secret
+        DB_USERNAME: root
+        DB_PASSWORD: root
       run: php artisan migrate --force
 
     - name: Installing Package.json
       run: npm install
-      
+
     - name: Build Assets
       run: npm run build
         
@@ -63,8 +65,8 @@ jobs:
         DB_HOST: 127.0.0.1
         DB_PORT: 3306
         DB_DATABASE: hey_professor
-        DB_USERNAME: hey_professor_user
-        DB_PASSWORD: secret
+        DB_USERNAME: root
+        DB_PASSWORD: root
       run: php artisan test --parallel
       
     - name: Execute Larastan
@@ -72,3 +74,4 @@ jobs:
       
     - name: Execute Laravel Pint
       run: vendor/bin/pint --test
+
