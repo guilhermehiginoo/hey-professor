@@ -20,10 +20,6 @@ This repository follows an organized workflow with branches, code analysis tools
 #### Run Pint to fix code:
 ```sh
 ./vendor/bin/pint
-
-#### Rodar Pint para corrigir código:
-```sh
-./vendor/bin/pint
 ```
 
 ### 🧐 Larastan - Static Code Analysis
