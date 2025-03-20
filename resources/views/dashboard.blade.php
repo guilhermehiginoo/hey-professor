@@ -15,8 +15,8 @@
 
         <hr class="border-gray-700 border-dashed mt-2 my-4">
         {{-- listagem --}}
-        <div class="dark:text-gray-300 uppercase font-bold mb-1">List of Questions</div>
-        <div class="dark:text-gray-400 space-y-4">
+        <div class="dark:text-gray-300 uppercase font-bold mb-3">List of Questions</div>
+        <div class="dark:text-gr    ay-400 space-y-4">
             @foreach($questions as $item)
                 <x-question :question="$item"/>
             @endforeach
