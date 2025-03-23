@@ -32,7 +32,7 @@ else
     done
 fi
 
-echo "🎉 Tudo pronto! Agora seu código está impecável. Pode fazer o commit tranquilo!"
+echo "🎉 Tudo pronto! Agora seu código está impecável. Pode fazer o push tranquilo!"
 
 # Finaliza o script com sucesso
 exit 0

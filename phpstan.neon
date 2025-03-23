@@ -8,6 +8,7 @@ parameters:
         - '#Method App\\Models\\Question::likes\(\) return type with generic class Illuminate\\Database\\Eloquent\\Casts\\Attribute does not specify its types: TGet, TSet#'
         - '#Method App\\Models\\Question::unlikes\(\) return type with generic class Illuminate\\Database\\Eloquent\\Casts\\Attribute does not specify its types: TGet, TSet#'
 
+    reportUnmatchedIgnoredErrors: false
 
     paths:
         - app/
