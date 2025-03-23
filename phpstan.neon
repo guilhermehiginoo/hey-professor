@@ -5,6 +5,9 @@ includes:
 parameters:
     ignoreErrors:
         - '#Class App\\Models\\Question uses generic trait Illuminate\\Database\\Eloquent\\Factories\\HasFactory but does not specify its types#'
+        - '#Method App\\Models\\Question::likes\(\) return type with generic class Illuminate\\Database\\Eloquent\\Casts\\Attribute does not specify its types: TGet, TSet#'
+        - '#Method App\\Models\\Question::unlikes\(\) return type with generic class Illuminate\\Database\\Eloquent\\Casts\\Attribute does not specify its types: TGet, TSet#'
+
 
     paths:
         - app/
