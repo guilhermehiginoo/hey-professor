@@ -11,7 +11,6 @@ use function Pest\Laravel\{actingAs, assertDatabaseCount, assertDatabaseHas, pos
 it('should be able to create a new question bigger than 255 characters', function () {
     // Arrange :: preparar
     $user = User::factory()->create();
-
     actingAs($user);
     // função que faz eu logar no meu teste como usuário
 
@@ -27,10 +26,28 @@ it('should be able to create a new question bigger than 255 characters', functio
 
 });
 
+it('should create as a draft all the time', function () {
+    // Arrange :: preparar
+    $user = User::factory()->create();
+    actingAs($user);
+    // função que faz eu logar no meu teste como usuário
+
+    // Act :: agir
+    post(route('question.store'), [
+        'question' => str_repeat('*', 260) . '?',
+
+    ]);
+
+    // Assert :: verificar
+    assertDatabaseHas('questions', [
+        'question' => str_repeat('*', 260) . '?',
+        'draft'    => true]);
+
+});
+
 it('should check if ends with question mark ?', function () {
     // Arrange :: preparar
     $user = User::factory()->create();
-
     actingAs($user);
 
     // Act :: agir
