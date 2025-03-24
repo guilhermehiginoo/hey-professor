@@ -16,3 +16,7 @@ it('should be abe to publish a question', function () {
         ->draft->toBeFalse();
 
 });
+
+it('should make sure that only the person who has created the question can publish it', function () {
+
+});
