@@ -81,3 +81,9 @@ it('should have at least 10 characters', function () {
     assertDatabaseCount('questions', 0);
 
 });
+
+test('only authenticated users can create questions', function () {
+    post(route('question.store'), [
+        'question' => str_repeat('*', 8) . '?',
+    ])->assertRedirect(route('login'));
+});
