@@ -65,6 +65,14 @@ class User extends Authenticatable implements MustVerifyEmail
      * ex: "quero retornar o username de um usuário", eu posso usar $this->username;
      */
 
+    /**
+     * @return HasMany<Question, $this>
+     */
+    public function questions(): HasMany
+    {
+        return $this->hasMany(Question::class, 'created_by');
+    }
+
     public function like(Question $question): void
     {
         $this->votes()->updateOrCreate(
