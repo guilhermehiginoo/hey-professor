@@ -1,9 +1,16 @@
-<!-- resources/views/question/edit.blade.php -->
-<h1>Editar Question</h1>
-<form action="" method="POST">
-    @csrf
-    <!-- Adicione os campos necessários aqui -->
-    <input type="text" name="title" value="{{ $question->title }}" placeholder="Título">
-    <textarea name="content" placeholder="Conteúdo">{{ $question->content }}</textarea>
-    <button type="submit">Salvar</button>
-</form>
+<x-app-layout>
+    <x-slot name="header">
+        <x-header>
+            {{__('Edit Question')}} :: {{ $question->id }}
+        </x-header>
+    </x-slot>
+
+    <x-container>
+        <x-form :action="route('question.update', $question)" put>
+            <x-textarea label="Question" name="question" :value="$question->question"/>
+
+            <x-btn.primary>Save</x-btn.primary>
+            <x-btn.reset>Cancel</x-btn.reset>
+        </x-form>
+    </x-container>
+</x-app-layout>
