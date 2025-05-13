@@ -2,9 +2,9 @@
 
 use App\Models\{Question, User};
 
-use function Pest\Laravel\{actingAs, assertDatabaseMissing, delete};
+use function Pest\Laravel\{actingAs, assertSoftDeleted, patch};
 
-it('should be able to destroy a question', function () {
+it('should be able to archive a question', function () {
     $user     = User::factory()->create();
     $question = Question::factory()
         ->for($user, 'createdBy')
@@ -12,26 +12,27 @@ it('should be able to destroy a question', function () {
 
     actingAs($user);
 
-    delete(route('question.destroy', $question))
+    patch(route('question.archive', $question))
         ->assertRedirect();
 
-    assertDatabaseMissing('questions', ['id' => $question->id]);
+    assertSoftDeleted('questions', ['id' => $question->id]);
 
+    expect($question->refresh()->deleted_at !== null)->toBeTrue();
 });
 
-it('should make sure that only the person who has created the question can destroy it', function () {
+it('should make sure that only the person who has created the question can archive it', function () {
     $rightUser = User::factory()->create();
     $wrongUser = User::factory()->create();
     $question  = Question::factory()->create(['draft' => true, 'created_by' => $rightUser->id]);
 
     actingAs($wrongUser);
 
-    delete(route('question.destroy', $question))
+    patch(route('question.archive', $question))
         ->assertForbidden();
 
     actingAs($rightUser);
 
-    delete(route('question.destroy', $question))
+    patch(route('question.archive', $question))
         ->assertRedirect();
 
 });
