@@ -15,7 +15,7 @@ it('should be able to destroy a question', function () {
     delete(route('question.destroy', $question))
         ->assertRedirect();
 
-    assertDATABASEMissing('questions', ['id' => $question->id]);
+    assertDatabaseMissing('questions', ['id' => $question->id]);
 
 });
 
