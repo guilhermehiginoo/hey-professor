@@ -15,8 +15,16 @@
             </form>
 
             @if($questions->isEmpty())
-                <div class="dark-text-gray-300 text-center flex justify-center">
-                    <x-draw.searching class="w-80 h-80"/>
+                <div class="dark-text-gray-300 text-center flex flex-col justify-center">
+
+
+                    <div class="justify-center flex">
+                        <x-draw.searching class="w-80 h-80"/>
+                    </div>
+
+                    <div class="mt-8 dark:text-gray-400 font-bold text-2xl">
+                        Question not found
+                    </div>
 
                 </div>
             @else
