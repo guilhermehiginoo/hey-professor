@@ -1,31 +1,47 @@
 [![CI Main](https://github.com/guilhermehiginoo/hey-professor/actions/workflows/laravel.yml/badge.svg?branch=develop)](https://github.com/guilhermehiginoo/hey-professor/actions/workflows/laravel.yml)
 [![CI Develop](https://github.com/guilhermehiginoo/hey-professor/actions/workflows/laravel.yml/badge.svg?branch=develop)](https://github.com/guilhermehiginoo/hey-professor/actions/workflows/laravel.yml)
 
-## About Hey Professor
->>>>>>> develop
+# Hey Professor 👨‍🏫
 
-<<<<<<< feature/HEY-2-setup-de-desenvolvimento
-# Laravel Environment Setup
+[![Autor](https://img.shields.io/badge/author-guilhermehiginoo-blue?style=flat-square)](https://github.com/guilhermehiginoo)
+[![License](https://img.shields.io/badge/license-MIT-lightgrey?style=flat-square)](#)
+[![Linguagem](https://img.shields.io/badge/feito%20em-Blade-blueviolet?style=flat-square)](#)
 
-This repository follows an organized workflow with branches, code analysis tools, and Git hooks to maintain code quality and efficient development.
+## ✨ Sobre o projeto
 
-## 🛠️ Tools Used
+**Hey Professor** é um sistema desenvolvido para facilitar a comunicação, organização e o gerenciamento de atividades acadêmicas entre professores e alunos. Ideal para quem busca dinamizar o ambiente educacional com tecnologia, proporcionando uma interface intuitiva e recursos modernos.
 
-### 🚀 Husky - Git Hooks
-**Husky** has been set up to ensure commit messages follow a specific format. All commits must begin with **HEY-2**. [Learn more](https://typicode.github.io/husky/)
+Este projeto foi criado como parte do curso da [Pinguim Academy](https://pinguim.academy/dashboard). Agradeço à Pinguim Academy pela oportunidade de aprendizado e pelo excelente conteúdo oferecido!
 
-### 🧹 Laravel Pint - Code Formatting
-**Laravel Pint** is used to ensure clean and standardized code by checking the code's indentation. [Learn more](https://laravel.com/docs/12.x/pint)
+> 💡 **Personalize esta seção com a missão do seu projeto!**
 
-#### Run Pint to fix code:
-```sh
-./vendor/bin/pint
-```
+## 🚀 Funcionalidades
 
-### 🧐 Larastan - Static Code Analysis
-**Larastan** is an extension of PHPStan for Laravel, ensuring that our project has no errors. [Learn More](https://github.com/larastan/larastan)
+- Cadastro e autenticação de usuários (professores e alunos)
+- Gerenciamento de turmas, disciplinas e atividades
+- Envio e correção de tarefas
+- Comunicação direta entre professores e alunos
+- Dashboard interativo para acompanhamento de desempenho
 
-#### Run **Larastan** to check for errors:
-```sh
-./vendor/bin/phpstan analyse
-```
+*(Adapte conforme as funcionalidades reais do seu sistema!)*
+
+## 🛠️ Tecnologias utilizadas
+
+- **Blade** (Laravel Templates)
+- Laravel (Backend PHP)
+- MySQL / PostgreSQL
+- HTML, CSS e JavaScript
+- Outras tecnologias...
+
+## 📝 Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues, enviar pull requests ou sugerir melhorias.
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
+---
+
+> Feito com 💙 por [@guilhermehiginoo](https://github.com/guilhermehiginoo)  
+> Projeto desenvolvido no curso da [Pinguim Academy](https://pinguim.academy/dashboard)
