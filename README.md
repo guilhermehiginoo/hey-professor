@@ -3,10 +3,6 @@
 
 # Hey Professor 👨‍🏫
 
-[![Autor](https://img.shields.io/badge/author-guilhermehiginoo-blue?style=flat-square)](https://github.com/guilhermehiginoo)
-[![License](https://img.shields.io/badge/license-MIT-lightgrey?style=flat-square)](#)
-[![Linguagem](https://img.shields.io/badge/feito%20em-Blade-blueviolet?style=flat-square)](#)
-
 ## ✨ Sobre o projeto
 
 **Hey Professor** é um sistema desenvolvido para facilitar a comunicação, organização e o gerenciamento de atividades acadêmicas entre professores e alunos. Ideal para quem busca dinamizar o ambiente educacional com tecnologia, proporcionando uma interface intuitiva e recursos modernos.
