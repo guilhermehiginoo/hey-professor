@@ -14,25 +14,15 @@ Eu sempre tive curiosidade para saber como funciona o desenvolvimento e, aprende
 
 ## 🚀 Funcionalidades
 
-- Cadastro e autenticação de usuários (professores e alunos)
-- Gerenciamento de turmas, disciplinas e atividades
-- Envio e correção de tarefas
-- Comunicação direta entre professores e alunos
-- Dashboard interativo para acompanhamento de desempenho
-
+- Cadastro e autenticação feita via Github.
+- Envio de perguntas para auxiliar professores, na qual as mais votadas ficam no topo.
 
 ## 🛠️ Tecnologias utilizadas
 
 - **Blade** (Laravel Templates)
-- Laravel (Backend PHP)
-- MySQL / PostgreSQL
-- HTML, CSS e JavaScript
-- Outras tecnologias...
-
-## 📝 Contribuição
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues, enviar pull requests ou sugerir melhorias.
----
+- **Laravel** (Backend PHP)
+- **MySQL** / PostgreSQL
+- Testes e identação: Larastan e Laravel Pint
 
 > Feito com 💙 por [@guilhermehiginoo](https://github.com/guilhermehiginoo)  
 > Projeto desenvolvido no curso da [Pinguim Academy](https://pinguim.academy/dashboard)
